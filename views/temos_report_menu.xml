@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE odoo>
+<odoo>
+  <menuitem
+    id="menu_temos_report"
+    parent="temos.menu_temos"
+    name="Relatórios"
+    sequence="0"
+  />
+</odoo>
