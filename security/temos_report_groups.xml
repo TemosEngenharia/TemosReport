@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE odoo>
+<odoo>
+  <record id="group_temos_report_manager" model="res.groups">
+    <field name="name">Temos Relatórios Admnistradores</field>
+  </record>
+  <record id="group_temos_report_user" model="res.groups">
+    <field name="name">Temos Relatórios Usuários</field>
+  </record>  
+</odoo>

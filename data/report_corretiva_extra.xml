@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Temos Engenharia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="local_py3o_server" model="py3o.server">
+      <field name="url">http://localhost:8765/form</field>
+    </record>
+
+    <record id="temos_corretiva_report_py3o" model="ir.actions.report.xml">
+      <field name="name">Relatório Corretivas</field>
+      <field name="type">ir.actions.report.xml</field>
+      <field name="model">corretiva.entry_form</field>
+      <field name="report_name">Corretivas</field>
+      <field name="report_type">py3o</field>
+      <field name="py3o_filetype">pdf</field>
+      <field name="py3o_server_id" ref="local_py3o_server"/>
+      <field name="py3o_is_local_fusion" eval="1"/>
+      <!--<field name="py3o_filetype">odt</field>-->
+      <field name="module">temos_report</field>
+      <field name="py3o_template_fallback">data/report_corretiva.odt</field>
+    </record>
+
+    <record id="temos_corretiva_report_py3o_print_action" model="ir.values">
+      <field eval="'action'" name="key" />
+      <field eval="'client_print_multi'" name="key2" />
+      <field name="model">corretiva.entry_form</field>
+      <field name="name">Temos Relatório Corretiva</field>
+      <field eval="'ir.actions.report.xml,'+str(temos_corretiva_report_py3o)" name="value" />
+    </record>
+
+</odoo>
+
