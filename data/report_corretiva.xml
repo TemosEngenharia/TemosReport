@@ -5,15 +5,70 @@
     <field name="url">http://localhost:8765/form</field>
   </record>
 
-  <record id="temos_corretiva_report_py3o" model="ir.actions.report.xml">
-    <field name="name">Manutenção Corretiva</field>
+  <record id="temos_report_mcor_capa_py3o" model="ir.actions.report.xml">
+    <field name="name">Manutenção Corretiva - Capa</field>
     <field name="model">mcorretiva.mco_form</field>
-    <field name="report_name">Manutenção Corretiva</field>
+    <field name="report_name">mcor_capa</field>
     <field name="report_type">py3o</field>
-    <field name="py3o_filetype">odt</field>
+    <field name="py3o_filetype">pdf</field>
     <field name="py3o_server_id" ref="local_py3o_server"/>
     <field name="module">temos_report</field>
-    <field name="py3o_template_fallback">data/report_corretiva.odt</field>
+    <field name="py3o_template_fallback">data/template/report_mcorretiva_01_capa.odt</field>
+  </record>
+
+  <record id="temos_report_mcor_resumo_py3o" model="ir.actions.report.xml">
+    <field name="name">Manutenção Corretiva - Resumo</field>
+    <field name="model">mcorretiva.mco_form</field>
+    <field name="report_name">mcor_resumo</field>
+    <field name="report_type">py3o</field>
+    <field name="py3o_filetype">pdf</field>
+    <field name="py3o_server_id" ref="local_py3o_server"/>
+    <field name="module">temos_report</field>
+    <field name="py3o_template_fallback">data/template/report_mcorretiva_02_resumo.odt</field>
+  </record>
+
+  <record id="temos_report_mcor_posto_py3o" model="ir.actions.report.xml">
+    <field name="name">Manutenção Corretiva - Posto</field>
+    <field name="model">mcorretiva.mco_form</field>
+    <field name="report_name">mcor_posto</field>
+    <field name="report_type">py3o</field>
+    <field name="py3o_filetype">pdf</field>
+    <field name="py3o_server_id" ref="local_py3o_server"/>
+    <field name="module">temos_report</field>
+    <field name="py3o_template_fallback">data/template/report_mcorretiva_03_posto.odt</field>
+  </record>
+
+  <record id="temos_report_mcor_pistas_py3o" model="ir.actions.report.xml">
+    <field name="name">Manutenção Corretiva - Pistas</field>
+    <field name="model">mcorretiva.mco_form</field>
+    <field name="report_name">mcor_pistas</field>
+    <field name="report_type">py3o</field>
+    <field name="py3o_filetype">pdf</field>
+    <field name="py3o_server_id" ref="local_py3o_server"/>
+    <field name="module">temos_report</field>
+    <field name="py3o_template_fallback">data/template/report_mcorretiva_04_pistas.odt</field>
+  </record>
+
+  <record id="temos_report_mcor_servidor_py3o" model="ir.actions.report.xml">
+    <field name="name">Manutenção Corretiva - Servidor</field>
+    <field name="model">mcorretiva.mco_form</field>
+    <field name="report_name">mcor_servidor</field>
+    <field name="report_type">py3o</field>
+    <field name="py3o_filetype">pdf</field>
+    <field name="py3o_server_id" ref="local_py3o_server"/>
+    <field name="module">temos_report</field>
+    <field name="py3o_template_fallback">data/template/report_mcorretiva_05_servidor.odt</field>
+  </record>
+
+  <record id="temos_report_mcor_equipamentos_py3o" model="ir.actions.report.xml">
+    <field name="name">Manutenção Corretiva - Equipamentos</field>
+    <field name="model">mcorretiva.mco_form</field>
+    <field name="report_name">mcor_equipamentos</field>
+    <field name="report_type">py3o</field>
+    <field name="py3o_filetype">pdf</field>
+    <field name="py3o_server_id" ref="local_py3o_server"/>
+    <field name="module">temos_report</field>
+    <field name="py3o_template_fallback">data/template/report_mcorretiva_06_equipamentos.odt</field>
   </record>
 
 </odoo>
