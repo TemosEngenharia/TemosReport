@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo, Open Source Management Solution
@@ -40,7 +40,12 @@
     },
     'data': [
              'data/report_corretiva.xml',
+             'data/mail_status.xml',
+             'data/xml_status.xml',
+             'data/importer_status.xml',
+             'data/pdf_status.xml',
              'views/temos_report_menu.xml',
+             'views/temos_report_config_menu.xml',
             ],
     'demo': [],
     'test': [],

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE odoo>
+<odoo>
+    <record id="mail_status_1" model="temos_report.mail_status">
+        <field name="active">True</field>
+        <field name="name">OK</field>
+        <field name="description">Recebido e Processado</field>
+    </record>
+    <record id="mail_status_2" model="temos_report.mail_status">
+        <field name="active">True</field>
+        <field name="name">OK</field>
+        <field name="description">Enviado com sucesso</field>
+    </record>
+    <record id="mail_status_3" model="temos_report.mail_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_101</field>
+        <field name="description">Não contém arquivo XML anexo</field>
+    </record>
+    <record id="mail_status_4" model="temos_report.mail_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_102</field>
+        <field name="description">Remetende desconhecido</field>
+    </record>
+    <record id="mail_status_5" model="temos_report.mail_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_103</field>
+        <field name="description"></field>
+    </record>
+    <record id="mail_status_6" model="temos_report.mail_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_104</field>
+        <field name="description"></field>
+    </record>
+</odoo>

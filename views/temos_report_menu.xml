@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE odoo>
 <odoo>
+  <act_window
+    id="temos_report_action"
+    name="Acompanhamento dos relatórios"
+    res_model="temos_report.base"
+    view_mode="tree"
+  />
+
   <menuitem
     id="menu_temos_report"
-    parent="temos.menu_temos"
     name="Relatórios"
-    sequence="0"
+    parent="temos.menu_temos"
+    sequence="100"
+    action="temos_report_action"
   />
+ 
+  <record id="temos_report_base_tree_view" model="ir.ui.view">
+    <field name="name">temos_report_base_tree_view</field>
+    <field name="model">temos_report.base</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="event_name" string="Evento"/>
+        <field name="process_id" string="Último Processo Executado"/>
+        <field name="mail_in_status_id" string="Recebimento do E-mail"/>
+        <field name="xml_status_id" string="Criação do XML"/>
+        <field name="importer_status_id" string="Importação para Odoo"/>
+        <field name="report_status_id" string="Geração do PDF"/>
+        <field name="mail_out_status_id" string="Envio do Relatório"/>
+      </tree>
+    </field>
+  </record>
+
 </odoo>
