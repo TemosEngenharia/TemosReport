@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE odoo>
+<odoo>
+    <record id="xml_status_1" model="temos_report.xml_status">
+        <field name="active">True</field>
+        <field name="name">OK</field>
+        <field name="description">Arquivo XML pronto para processamento</field>
+    </record>
+    <record id="xml_status_2" model="temos_report.xml_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_201</field>
+        <field name="description">Não foi possível salvar arquivo XML</field>
+    </record>
+    <record id="xml_status_3" model="temos_report.xml_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_202</field>
+        <field name="description"></field>
+    </record>
+    <record id="xml_status_4" model="temos_report.xml_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_203</field>
+        <field name="description"></field>
+    </record>
+    <record id="xml_status_5" model="temos_report.xml_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_204</field>
+        <field name="description"></field>
+    </record>
+    <record id="xml_status_6" model="temos_report.xml_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_205</field>
+        <field name="description"></field>
+    </record>
+</odoo>

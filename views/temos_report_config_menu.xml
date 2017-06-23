@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE odoo>
+<odoo>
+  <menuitem
+    id="menu_temos_report_config"
+    name="Configurações"
+    parent="temos.menu_temos"
+    sequence="200"
+  />
+
+  <!-- Mail Status -->
+  <act_window
+    id="temos_report_mail_status_action"
+    name="Estados do E-mail"
+    res_model="temos_report.mail_status"
+    view_mode="tree"
+  />
+
+  <menuitem
+    id="menu_temos_report_mail_status"
+    name="Estados do E-mail"
+    parent="temos_report.menu_temos_report_config"
+    sequence="10"
+    action="temos_report_mail_status_action"
+  />
+ 
+  <record id="temos_report_mail_status_tree_view" model="ir.ui.view">
+    <field name="name">temos_report_mail_status_tree_view</field>
+    <field name="model">temos_report.mail_status</field>
+    <field name="arch" type="xml">
+      <tree editable="top">
+        <field name="active" string="Ativo"/>
+        <field name="name" string="Código do Estado"/>
+        <field name="description" string="Descrição do Estado"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- XML Status -->
+  <act_window
+    id="temos_report_xml_status_action"
+    name="Estados do XML"
+    res_model="temos_report.xml_status"
+    view_mode="tree"
+  />
+
+  <menuitem
+    id="menu_temos_report_xml_status"
+    name="Estados do XML"
+    parent="temos_report.menu_temos_report_config"
+    sequence="20"
+    action="temos_report_xml_status_action"
+  />
+ 
+  <record id="temos_report_xml_status_tree_view" model="ir.ui.view">
+    <field name="name">temos_report_xml_status_tree_view</field>
+    <field name="model">temos_report.xml_status</field>
+    <field name="arch" type="xml">
+      <tree editable="top">
+        <field name="active" string="Ativo"/>
+        <field name="name" string="Código do Estado"/>
+        <field name="description" string="Descrição do Estado"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Importer Status -->
+  <act_window
+    id="temos_report_importer_status_action"
+    name="Estados do Importador"
+    res_model="temos_report.importer_status"
+    view_mode="tree"
+  />
+
+  <menuitem
+    id="menu_temos_report_importer_status"
+    name="Estados do Importador"
+    parent="temos_report.menu_temos_report_config"
+    sequence="30"
+    action="temos_report_importer_status_action"
+  />
+ 
+  <record id="temos_report_importer_status_tree_view" model="ir.ui.view">
+    <field name="name">temos_report_importer_status_tree_view</field>
+    <field name="model">temos_report.importer_status</field>
+    <field name="arch" type="xml">
+      <tree editable="top">
+        <field name="active" string="Ativo"/>
+        <field name="name" string="Código do Estado"/>
+        <field name="description" string="Descrição do Estado"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- PDF Status -->
+  <act_window
+    id="temos_report_pdf_status_action"
+    name="Estados do Relatório PDF"
+    res_model="temos_report.pdf_status"
+    view_mode="tree"
+  />
+
+  <menuitem
+    id="menu_temos_report_pdf_status"
+    name="Estados do Relatório PDF"
+    parent="temos_report.menu_temos_report_config"
+    sequence="40"
+    action="temos_report_pdf_status_action"
+  />
+ 
+  <record id="temos_report_pdf_status_tree_view" model="ir.ui.view">
+    <field name="name">temos_report_pdf_status_tree_view</field>
+    <field name="model">temos_report.pdf_status</field>
+    <field name="arch" type="xml">
+      <tree editable="top">
+        <field name="active" string="Ativo"/>
+        <field name="name" string="Código do Estado"/>
+        <field name="description" string="Descrição do Estado"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Report Types -->
+  <act_window
+    id="temos_report_report_type_action"
+    name="Tipos de Relatórios Importados"
+    res_model="temos_report.report_type"
+    view_mode="tree,form"
+  />
+
+  <menuitem
+    id="menu_temos_report_report_type"
+    name="Tipos de Relatórios Importados"
+    parent="temos_report.menu_temos_report_config"
+    sequence="100"
+    action="temos_report_report_type_action"
+  />
+ 
+  <record id="temos_report_report_type_tree_view" model="ir.ui.view">
+    <field name="name">temos_report_report_type_tree_view</field>
+    <field name="model">temos_report.report_type</field>
+    <field name="arch" type="xml">
+      <tree editable="top">
+        <!-- <field name="active" string="Ativo"/> -->
+        <field name="report_code"/>
+        <field name="name" string="Nome do Formulário no OfficeTrack"/>
+        <field name="mail_dest_ids" widget="many2many_tags" string="Destinatários do Relatório em PDF"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Destination E-mails -->
+  <act_window
+    id="temos_report_mail_dest_action"
+    name="Destinatários dos Relatórios"
+    res_model="temos_report.mail_dest"
+    view_mode="tree,form"
+  />
+
+  <menuitem
+    id="menu_temos_report_mail_dest"
+    name="Destinatários dos Relatórios"
+    parent="temos_report.menu_temos_report_config"
+    sequence="110"
+    action="temos_report_mail_dest_action"
+  />
+ 
+  <record id="temos_report_mail_dest_tree_view" model="ir.ui.view">
+    <field name="name">temos_report_mail_dest_tree_view</field>
+    <field name="model">temos_report.mail_dest</field>
+    <field name="arch" type="xml">
+      <tree editable="top">
+        <!-- <field name="active" string="Ativo"/> -->
+        <field name="name"/>
+        <field name="email"/>
+        <field name="report_type_ids" widget="many2many_tags" string="Relatórios em PDF que serão enviados" />
+      </tree>
+    </field>
+  </record>
+
+</odoo>

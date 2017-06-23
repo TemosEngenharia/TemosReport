@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE odoo>
+<odoo>
+    <record id="importer_status_1" model="temos_report.importer_status">
+        <field name="active">True</field>
+        <field name="name">OK</field>
+        <field name="description">XML importado com sucesso</field>
+    </record>
+    <record id="importer_status_2" model="temos_report.importer_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_101</field>
+        <field name="description">Falha ao importar XML</field>
+    </record>
+    <record id="importer_status_3" model="temos_report.importer_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_102</field>
+        <field name="description"></field>
+    </record>
+    <record id="importer_status_4" model="temos_report.importer_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_103</field>
+        <field name="description"></field>
+    </record>
+    <record id="importer_status_5" model="temos_report.importer_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_104</field>
+        <field name="description"></field>
+    </record>
+    <record id="importer_status_6" model="temos_report.importer_status">
+        <field name="active">True</field>
+        <field name="name">ERROR_105</field>
+        <field name="description"></field>
+    </record>
+</odoo>
