@@ -12,7 +12,7 @@
     id="menu_temos_report"
     name="Relatórios"
     parent="temos.menu_temos"
-    sequence="100"
+    sequence="110"
     action="temos_report_action"
   />
  
