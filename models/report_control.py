@@ -20,22 +20,22 @@ class TemosReportBase(models.Model):
     mail_in_subject = fields.Char(string = u'Assundo do e-mail de Entrada')
     mail_in_status_id = fields.Many2one('temos_report.mail_status',
                                      u'Estado do e-mail de entrada',
-                                     ondelete = "cascade", required = True)
+                                     ondelete = "cascade")
     mail_in_date = fields.Datetime(string = u'Data do recebimento do e-mail de entrada')
     mail_in_filename = fields.Char(string = u'Local onde o e-mail de entrada foi armazenado')
     xml_status_id = fields.Many2one('temos_report.xml_status',
                                      u'Estado do arquivo XML de entrada',
-                                     ondelete = "cascade", required = True)
+                                     ondelete = "cascade")
     xml_create_date = fields.Datetime(string = u'Data da criação do arquivo XML')
     xml_filename = fields.Char(string = u'Local onde o XML foi armazenado')
     importer_status_id = fields.Many2one('temos_report.importer_status',
                                      u'Estado da importação do arquivo XML',
-                                     ondelete = "cascade", required = True)
+                                     ondelete = "cascade")
     importer_date = fields.Datetime(string = u'Data em que o XML foi importado no Odoo')
     import_record_id = fields.Integer(string = u'ID no Odoo referente ao XML importado')
     report_status_id = fields.Many2one('temos_report.pdf_status',
                                      u'Estado do arquivo XML de entrada',
-                                     ondelete = "cascade", required = True)
+                                     ondelete = "cascade")
     report_create_date = fields.Datetime(string = u'Data da criação do arquivo PDF')
     report_pdf_filename = fields.Char(string = u'Local onde foi armazendo o PDF')
     mail_out_from = fields.Char(string = u'Remetende do e-mail de saída')
@@ -43,7 +43,7 @@ class TemosReportBase(models.Model):
     mail_out_subject = fields.Char(string = u'Assundo do e-mail de saída')
     mail_out_status_id = fields.Many2one('temos_report.mail_status',
                                      u'Estado do e-mail de saída',
-                                     ondelete = "cascade", required = True)
+                                     ondelete = "cascade")
     mail_out_date = fields.Datetime(string = u'Data de envio do e-mail de saída')
     mail_out_filename = fields.Char(string = u'Local onde foi armazenado o e-mail de saída')
 
